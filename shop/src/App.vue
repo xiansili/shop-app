@@ -1,36 +1,26 @@
 <template>
   <div id="app">
-    <ul class="footer-bar">
-      <li class="footer-bar-item">
-        <router-link to="/home">首页</router-link>
-      </li>
-      <li class="footer-bar-item">
-        <router-link to="/category">分类</router-link>
-      </li>
-      <li class="footer-bar-item">
-        <router-link to="/cart">购物车</router-link>
-      </li>
-      <li class="footer-bar-item">
-        <router-link to="/me">我的</router-link>
-      </li>
-    </ul>
     <router-view/>
+    <van-tabbar v-model="active">
+      <van-tabbar-item icon="shop" to="/">首页</van-tabbar-item>
+      <van-tabbar-item icon="label" to="/category">分类</van-tabbar-item>
+      <van-tabbar-item icon="cart" to="/cart">购物车</van-tabbar-item>
+      <van-tabbar-item icon="manager" to="/me">我的</van-tabbar-item>
+    </van-tabbar>
+    
   </div>
 </template>
 
-<style lang="scss">
-.footer-bar {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 1rem;
-  line-height: 1rem;
-  background: #eee;
+<script>
 
-  &-item {
-    flex-grow: 1;
-    text-align: center;
-  }
+  export default {
+  data() {
+    return {
+      active: 0
+    }
 }
+}
+</script>
+
+<style lang="scss">
 </style>
