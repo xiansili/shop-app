@@ -14,6 +14,9 @@
 
           <van-field v-model="password" type="password" label="密码" placeholder="请输入密码" required/>
         </van-cell-group>
+        <div>
+          <van-button type="primary" size="large">登陆</van-button>
+        </div>
       </van-tab>
       <van-tab title="注册">
         <van-cell-group>
@@ -28,6 +31,9 @@
 
           <van-field v-model="password" type="password" label="密码" placeholder="请输入密码" required/>
         </van-cell-group>
+        <div>
+          <van-button type="primary" size="large">注册</van-button>
+        </div>
       </van-tab>
     </van-tabs>
   </div>

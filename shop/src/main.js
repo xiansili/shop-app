@@ -7,9 +7,10 @@ Vue.config.productionTip = false
 import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
 
-import { Tabbar, TabbarItem, Icon,Swipe, SwipeItem,NavBar,Tab, Tabs,Field } from 'vant';
+import { Tabbar, TabbarItem, Icon,Swipe, SwipeItem,NavBar,Tab, Tabs,Field,CellGroup,Button } from 'vant';
 
-Vue.use(Tabbar).use(TabbarItem).use(Icon).use(NavBar).use(Swipe).use(SwipeItem).use(Tab).use(Tabs).use(Field);
+Vue.use(Tabbar).use(Button)
+.use(TabbarItem).use(Icon).use(NavBar).use(Swipe).use(SwipeItem).use(Tab).use(Tabs).use(Field).use(CellGroup);
 new Vue({
   router,
   store,
