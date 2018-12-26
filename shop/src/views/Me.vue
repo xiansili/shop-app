@@ -4,7 +4,7 @@
       <van-tab title="登陆">
         <van-cell-group>
           <van-field
-            v-model="username"
+            v-model="LoginUsername"
             required
             clearable
             label="用户名"
@@ -12,7 +12,7 @@
             placeholder="请输入用户名"
           />
 
-          <van-field v-model="password" type="password" label="密码" placeholder="请输入密码" required/>
+          <van-field v-model="LoginPassword" type="password" label="密码" placeholder="请输入密码" required/>
         </van-cell-group>
         <div>
           <van-button type="primary" size="large">登陆</van-button>
@@ -21,7 +21,7 @@
       <van-tab title="注册">
         <van-cell-group>
           <van-field
-            v-model="username"
+            v-model="RegistUsername"
             required
             clearable
             label="用户名"
@@ -29,24 +29,47 @@
             placeholder="请输入用户名"
           />
 
-          <van-field v-model="password" type="password" label="密码" placeholder="请输入密码" required/>
+          <van-field v-model="RegistPassword" type="password" label="密码" placeholder="请输入密码" required/>
         </van-cell-group>
         <div>
-          <van-button type="primary" size="large">注册</van-button>
+          <van-button type="primary" size="large" @click="registeHandler">注册</van-button>
         </div>
       </van-tab>
     </van-tabs>
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       active: 0,
-      username:'',
-      password:''
+      LoginUsername:'',
+      LoginPassword:'',
+      RegistUsername:'',
+      RegistPassword:''
     };
-  }
+  },
+  methods: {
+
+    //注册时的事件处理函数
+    registeHandler(){
+      //发送ajax请求
+      axios({
+        // url:'http://localhost:4000/user/registUser',
+        method:'post',
+        data:{
+          userName:this.RegistUsername,
+          password:this.RegistPassword
+        }
+
+      }).then( (res) => { 
+      console.log(res)
+
+      })
+
+    }
+  },
 };
 </script>
 
