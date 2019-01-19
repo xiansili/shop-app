@@ -59,7 +59,7 @@ export default {
         // url:'http://localhost:4000/user/registUser',
         method:'post',
         data:{
-          userName:this.RegistUsername,
+          x:this.RegistUsername,
           password:this.RegistPassword
         }
 
