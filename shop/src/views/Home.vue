@@ -22,6 +22,7 @@ export default {
 };
 </script>
 
+
 <style lang="scss" scoped>
   .swipe{
      height: 3rem;
