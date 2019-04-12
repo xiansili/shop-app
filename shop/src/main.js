@@ -11,6 +11,8 @@ import { Tabbar, TabbarItem, Icon,Swipe, SwipeItem,NavBar,Tab, Tabs,Field,CellGr
 
 Vue.use(Tabbar).use(Button)
 .use(TabbarItem).use(Icon).use(NavBar).use(Swipe).use(SwipeItem).use(Tab).use(Tabs).use(Field).use(CellGroup);
+
+
 new Vue({
   router,
   store,

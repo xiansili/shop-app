@@ -7,7 +7,6 @@
       <van-tabbar-item icon="cart" to="/cart">购物车</van-tabbar-item>
       <van-tabbar-item icon="manager" to="/me">我的</van-tabbar-item>
     </van-tabbar>
-    
   </div>
 </template>
 
