@@ -4,9 +4,9 @@
       <van-icon name="search" slot="left"/>
       <van-icon name="cart" slot="right"/>
     </van-nav-bar>
-    <van-swipe :autoplay="3000" class="swipe">
+    <van-swipe :autoplay="3000" class="swipe" indicator-color="white">
       <van-swipe-item v-for="(image, index) in images" :key="index">
-        <img v-lazy="image">
+        <img v-lazy="image" >
       </van-swipe-item>
     </van-swipe>
   </div>
