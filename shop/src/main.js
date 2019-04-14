@@ -6,6 +6,7 @@ import store from './store'
 Vue.config.productionTip = false
 import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
+import '@/mock/mock.js'
 
 import { Tabbar, TabbarItem, Icon,Swipe, SwipeItem,NavBar,Tab, Tabs,Field,CellGroup,Button,Lazyload } from 'vant';
 
