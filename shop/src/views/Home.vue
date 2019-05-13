@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <van-nav-bar title="首页" left-text="返回" left-arrow class="nav-title">
       <van-icon name="search" slot="left"/>
-      <van-icon name="cart" slot="right"/>
+      <van-icon @click="$router.push('me')" slot="right">{{userInfo.userName}}</van-icon>
     </van-nav-bar>
     <van-swipe :autoplay="3000" class="swiper" indicator-color="white">
       <van-swipe-item v-for="(image, index) in carouselItem" :key="index">
@@ -39,7 +39,7 @@
 
 <script>
 import "swiper/dist/css/swiper.css";
-
+import {mapState} from 'vuex';
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   data() {
@@ -300,7 +300,10 @@ export default {
   components: {
     swiper,
     swiperSlide
-  }
+  },
+  computed: {
+    ...mapState(['userInfo'])
+  },
 };
 </script>
 

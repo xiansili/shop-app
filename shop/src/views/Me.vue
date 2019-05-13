@@ -51,8 +51,9 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
-import url from '@/service.config.js'
+import axios from 'axios';
+import url from '@/service.config.js';
+import { mapActions } from 'vuex';
 export default {
   data() {
     return {
@@ -64,6 +65,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['loginAction']),
     //注册时的事件处理函数
     registeHandler() {
       axios({
@@ -97,9 +99,10 @@ export default {
           passWord: this.LoginPassword
         }
       }).then(res=>{
-        console.log(res)
         if(res.data.code == 200){
           this.$toast.success('登录成功')
+          this.loginAction(res.data.userInfo)
+          this.$router.push('/')
         }else{
             this.$toast.fail('登录失败')
           }

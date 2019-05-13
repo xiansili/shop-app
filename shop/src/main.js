@@ -8,14 +8,14 @@ import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
 import '@/mock/mock.js'
 
-import { Tabbar, TabbarItem, Icon,Swipe, 
+import { PullRefresh,List,Tabbar, TabbarItem, Icon,Swipe, 
   SwipeItem,NavBar,Tab, Tabs,Field,CellGroup,
-  Button,Lazyload,Toast } from 'vant';
+  Button,Lazyload,Toast,Row, Col} from 'vant';
 
-Vue.use(Tabbar).use(Button)
+Vue.use(Tabbar).use(Button).use(PullRefresh)
 .use(TabbarItem).use(Icon).use(NavBar)
-.use(Swipe).use(SwipeItem).use(Tab).use(Tabs)
-.use(Field).use(CellGroup).use(Lazyload).use(Toast);
+.use(Swipe).use(List).use(SwipeItem).use(Tab).use(Tabs)
+.use(Field).use(CellGroup).use(Lazyload).use(Toast).use(Row).use(Col);
 
 
 
